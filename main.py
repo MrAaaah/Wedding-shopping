@@ -10,22 +10,22 @@ l = list()
 money = list()
 size = list()
 
-for garment in xrange(nbGarments):
-	(m, nbGClass) = f.readline().split()
+for i in xrange(nbGarments):
+	(m, nb) = f.readline().split()
 
 	l.append(list())
 
 	# on stock le nb d'argent
 	money.append(int(m))
-	size.append(int(nbGClass))
+	size.append(int(nb))
 
-	for gClass in xrange(int(nbGClass)):
+	for j in xrange(int(nb)):
 		models = f.readline().split()
 		
-		l[garment].append(list())
+		l[i].append(list())
 
-		for i in xrange(int(models[0])):
-			l[garment][gClass].append(models[i + 1])
+		for k in xrange(int(models[0])):
+			l[i][j].append(models[k + 1])
 
 
 # recherche d'achat optimal via bruteforce (test de toutes les valeurs une par une)
