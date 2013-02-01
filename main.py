@@ -38,7 +38,7 @@ for i in xrange(len(l)):
 		for elmt in comb:
 			cost += int(elmt)
 
-		if money[i] > cost > maxCost:
+		if money[i] >= cost > maxCost:
 			maxCost = cost
 
 	if maxCost == 0:
